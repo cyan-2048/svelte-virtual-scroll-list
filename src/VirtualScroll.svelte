@@ -268,11 +268,12 @@
         </Item>
     {/if}
     <div style="padding: {paddingStyle}">
-        {#each displayItems as dataItem (dataItem[key])}
+        {#each displayItems as dataItem, index (dataItem[key])}
             <Item
                     on:resize={onItemResized}
                     uniqueKey={dataItem[key]}
                     horizontal={isHorizontal}
+                  {index}
                     type="item">
                 <slot data={dataItem}/>
             </Item>

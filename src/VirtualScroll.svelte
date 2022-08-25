@@ -273,9 +273,8 @@
                     on:resize={onItemResized}
                     uniqueKey={dataItem[key]}
                     horizontal={isHorizontal}
-                  {index}
                     type="item">
-                <slot data={dataItem}/>
+                <slot {index} data={dataItem}/>
             </Item>
         {/each}
     </div>
